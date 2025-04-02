@@ -41,6 +41,17 @@
     <?php wp_body_open(); ?>
 
     <header>
+        <!-- START STEP 2.25 ADD CUSTOM LOGO -->
+  <?php 
+    // Enables Wordpress custom logo
+    // See: https://developer.wordpress.org/reference%2Ffunctions%2Fadd_theme_support%2F/#custom-logo
+    
+        if ( function_exists( 'the_custom_logo' ) ) {
+        the_custom_logo();
+        }
+    ?>
+    <!-- END STEP 2.25 ADD CUSTOM LOGO -->
+     
     <div class="branding">
         <a href="<?php echo esc_url(home_url()); ?>">
         <?php bloginfo('name'); ?>
@@ -51,7 +62,7 @@
             <?php bloginfo('description'); ?>
             <?php // This is the WP site tagline, not the meta description tag ?>
     </div>
-    
+
         <nav>
                 <!-- START STEP 2.11 ADD THE MENU TO THE PAGE -->
     <?php 
