@@ -8,7 +8,6 @@
     
     <!-- START STEP 2.4 ADD HEADER.PHP CODE -->
     <!DOCTYPE html>
-    <html>
             <!-- START STEP 2.15 ADD HTML LANGUAGE ATTRIBUTES -->
 
     <html <?php language_attributes(); ?>>
@@ -31,14 +30,14 @@
 
     </head>
 
-    <body>
     <!-- START STEP 2.13 ADD SEARCH FORM -->
-
+    <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
+    
     <?php get_search_form(); ?>
 
     <!-- END STEP 2.13 ADD SEARCH FORM -->  
-    <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
+
 
     <header>
         <!-- START STEP 2.25 ADD CUSTOM LOGO -->
@@ -51,7 +50,7 @@
         }
     ?>
     <!-- END STEP 2.25 ADD CUSTOM LOGO -->
-     
+
     <div class="branding">
         <a href="<?php echo esc_url(home_url()); ?>">
         <?php bloginfo('name'); ?>
